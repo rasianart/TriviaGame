@@ -9,16 +9,33 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://use.fontawesome.com/a0becfad23.js"></script>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!--   <audio autoplay>
+  <source src="assets/audio/versionsversions.mp3" type="audio/mpeg">
+</audio> -->
+  <video id="vid" id="bgvid" playsinline muted loop>
+    <source id="sour" src="assets/videos/versionsversions.mp4" type="video/mp4">
+  </video>
 </head>
 
 <body>
- 
+  <h1 id="question" class="draggable"></h1>
+  <div id="choices0" class="choices draggable"></div>
+  <div id="choices1" class="choices draggable"></div>
+  <div id="choices2" class="choices draggable"></div>
+  <div id="choices3" class="choices draggable"></div>
+  <h2 id="timer"></h2>
+  <form id="form">
+  <textarea id="inputBox" rows="4" cols="50" autofocus="autofocus" required></textarea>
+  </form>
+  <div id="output"></div>
 </body>
 
 </html>
 <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+
 <script src="assets/javascript/scroll.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="assets/javascript/bootstrap.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/javascript/game.js"></script>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
