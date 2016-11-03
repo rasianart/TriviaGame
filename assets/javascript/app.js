@@ -16,7 +16,6 @@ var game = [{
     answer: 'Peppermint'
 }];
 
-
 var userGuess;
 var currentQ;
 var used = [];
@@ -25,34 +24,27 @@ var vidSkip = 20;
 var vidCount = 0;
 userInput = '';
 
-$('#inputBox').change(function () {
-    if ($.trim($('#inputBox').val()).length < 1) {
-
-        $('#output').html('Someway your box is being reported as empty... sadness.');
-
-    } else {
-
-        $('#output').html('Your users managed to put something in the box!');
-        //No guarantee it isn't mindless gibberish, sorry.
-
-    }
-});
+var video = document.getElementById('vid');
+    video.play();
 $('#inputBox').keydown(function(event) {
         if (event.keyCode == 13) {
             // this.form.submit();
+            event.preventDefault();
             userInput = document.getElementById('inputBox').value;
-            if(userInput === ""){
-                alert('yay');
-       
-$(document).one('click', function () {
+            if(isNaN(userInput)){
+                alert('Enter a number please');
+            } else {
+                alert('enter');
+                 
+// $(document).one('click', function () {
     run();
     randomQuestion();
     setupQ();
     // $('body').fadeTo(1000 * 30 , 0.05);
-    var video = document.getElementById('vid');
-    video.play();
+    // var video = document.getElementById('vid');
+    // video.play();
     $('.draggable').draggable();
-});
+// });
 
 // video controller
 $(document).keydown(function(event) {
@@ -85,17 +77,17 @@ $(document).keydown(function(event) {
 //       console.log('hey');
 //     });
 
-// $('.choices').on('click', function() {
-//         userGuess = $(this).html();
-//         console.log(userGuess);
-//         if (userGuess === currentQ.answer) {
-//             alert('Great, next question!');
-//             reset();
-//         } else {
-//             alert('Wrong answer, next question.');
-//             reset();
-//         }
-// });
+$('.choices').on('click', function() {
+        userGuess = $(this).html();
+        console.log(userGuess);
+        if (userGuess === currentQ.answer) {
+            alert('Great, next question!');
+            reset();
+        } else {
+            alert('Wrong answer, next question.');
+            reset();
+        }
+});
 }}});
 function randomQuestion() {
     var rand = Math.floor((Math.random() * 4 ));
@@ -135,7 +127,10 @@ function decrement(){
     if (number === 0){
         alert('Time Up!')
         reset();
-    }
+    } 
+    // else if (number === 25){
+    //     $('#inputBox').val('Hurry up gurl');
+    // }
 }
 
 // The stop function
@@ -157,4 +152,16 @@ function reset() {
     // $('body').fadeTo(1000 * 30 , 0.05);
 }
 
+// $('#inputBox').change(function () {
+//     if ($.trim($('#inputBox').val()).length < 1) {
+
+//         $('#output').html('Someway your box is being reported as empty... sadness.');
+
+//     } else {
+
+//         $('#output').html('Your users managed to put something in the box!');
+//         //No guarantee it isn't mindless gibberish, sorry.
+
+//     }
+// });
 

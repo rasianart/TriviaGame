@@ -18,19 +18,26 @@ body {
 	text-align: center;
 	overflow: hidden;
 }
-.allChoices {
-	display: block;
+#question {
+	font-family: 'Bungee Hairline', cursive;
 }
-.allChoices:hover {
+.choices {
+	display: block;
+	width: 500px;
+	margin-left: 33%;
+}
+.choices:hover {
 	cursor: pointer;
 }
-.draggable {
-
-}
 #inputBox {
-	margin-top: 400px;
+	/*margin-top: 400px;*/
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin-left: 37.5%;
+	margin-bottom: 415px;
+	z-index: 6;
 }
-
 ::-webkit-input-placeholder {
     text-align: center;
 }
@@ -50,10 +57,51 @@ textarea {
     text-align: justify;
     -moz-text-align-last: center; /* Firefox 12+ */
     text-align-last: center;
+
 }
-
-
-
-
+textarea:focus {
+/*	outline: none !important;
+    border:1px solid black;
+    box-shadow: 0 0 5px #719ECE;*/
+}
+#choices0 {
+	margin-top: 50px;
+	font-size: 24px;
+	margin-bottom: 50px;
+	font-family: 'Bungee Hairline', cursive;
+}
+#choices1 {
+	font-size: 36px;
+	margin-bottom: 150px;
+	font-family: 'Bungee Hairline', cursive;
+}
+#choices2 {
+	font-size: 36px;
+	margin-bottom: 50px;
+	font-family: 'Bungee Hairline', cursive;
+}
+#choices3 {
+	font-size: 24px;
+	margin-bottom: 50px;
+	font-family: 'Bungee Hairline', cursive;
+}
+#over {
+	background-color: transparent;
+	color: black;
+	position: fixed;
+	z-index: 7;
+	width: 100%;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 150px;
+	padding-top: 80px;
+	/*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+}
+#canvasDiv {
+	z-index: 5;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
 
 
