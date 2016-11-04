@@ -28,6 +28,8 @@ body {
 }
 .choices:hover {
 	cursor: pointer;
+	border: 1px solid black;
+	background-color: #e0e0e0;
 }
 #inputBox {
 	/*margin-top: 400px;*/
@@ -37,6 +39,7 @@ body {
 	margin-left: 37.5%;
 	margin-bottom: 415px;
 	z-index: 6;
+	/*text-transform: lowercase;*/
 }
 ::-webkit-input-placeholder {
     text-align: center;
@@ -89,13 +92,14 @@ textarea:focus {
 	background-color: transparent;
 	color: black;
 	position: fixed;
-	z-index: 7;
+	z-index: 4;
 	width: 100%;
 	font-family: Arial;
 	font-weight: bold;
 	font-size: 150px;
-	padding-top: 80px;
-	/*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+	top:0;
+	/*padding-top: 40px;*/
+	/*text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
 }
 #canvasDiv {
 	z-index: 5;
@@ -103,5 +107,9 @@ textarea:focus {
 	width: 100%;
 	top: 0;
 }
-
+#timer {
+	display: block;
+	width: 50px;
+	margin-left: 48%; 
+}
 
