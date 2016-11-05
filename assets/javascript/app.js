@@ -241,9 +241,6 @@ $(document).ready(function() {
             aud.play();
             switchTime = 262;
         }
-        if (aud.currentTime > 360) {
-            aud.play();
-        }
         $('#question').empty();
         $('.choices').empty();
     }
